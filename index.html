@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Maron Tavares - Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Navegação -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="#inicio" class="logo">GM</a>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">INÍCIO</a></li>
+                    <li><a href="#sobre">SOBRE</a></li>
+                    <li><a href="#projetos">PROJETOS</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção Inicial / Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-photo">
+                <img src="public/foto curso.jpeg" alt="Guilherme Maron Tavares" class="profile-img">
+            </div>
+            <h1 class="hero-title">Olá, me chamo <span class="highlight">Guilherme Maron Tavares</span>.</h1>
+            <p class="hero-bio">
+                Tenho 15 anos, sou apaixonado por tecnologia e desenvolvimento web. 
+                Adoro explorar como a tecnologia pode transformar ideias em realidade 
+                e como essa área de trabalho me permite criar soluções inovadoras. 
+                Cada projeto é uma nova oportunidade de aprender e crescer.
+            </p>
+            <div class="hero-cta">
+                <a href="#projetos" class="btn-hero">Ver Projetos</a>
+            </div>
+            <div class="hero-socials">
+                <a href="#" target="_blank" class="social-icon" aria-label="GitHub">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" class="social-icon" aria-label="LinkedIn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="mailto:" class="social-icon" aria-label="Email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">conheça um pouco mais sobre mim</h2>
+            <div class="sobre-content">
+                <div class="sobre-photo">
+                    <img src="public/foto curso.jpeg" alt="Guilherme Maron Tavares" class="sobre-img">
+                </div>
+                <div class="sobre-text">
+                    <p>
+                        Meu nome é <strong>Guilherme Maron Tavares</strong>, tenho 15 anos e sou apaixonado 
+                        por tecnologia e desenvolvimento web. Estou sempre buscando aprender novas tecnologias 
+                        e me desafiar com projetos que me permitam crescer como desenvolvedor.
+                    </p>
+                    <p>
+                        Além da programação, também sou apaixonado por futebol e tudo relacionado a esse universo. 
+                        Acredito que a dedicação e o trabalho em equipe do futebol se refletem também na forma 
+                        como encaro o desenvolvimento de projetos.
+                    </p>
+                </div>
+                
+                <div class="skills">
+                    <h3>Linguagens</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.314 18.857L5.143 12l1.543-1.543 4.286 4.286L17.314 6.857 18.857 8.4l-8.171 10.457z"/>
+                            </svg>
+                            HTML5
+                        </span>
+                        <span class="skill-tag">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.314 18.857L5.143 12l1.543-1.543 4.286 4.286L17.314 6.857 18.857 8.4l-8.171 10.457z"/>
+                            </svg>
+                            CSS3
+                        </span>
+                        <span class="skill-tag">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.314 18.857L5.143 12l1.543-1.543 4.286 4.286L17.314 6.857 18.857 8.4l-8.171 10.457z"/>
+                            </svg>
+                            JavaScript
+                        </span>
+                    </div>
+
+                    <h3>Outros</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.314 18.857L5.143 12l1.543-1.543 4.286 4.286L17.314 6.857 18.857 8.4l-8.171 10.457z"/>
+                            </svg>
+                            Git & GitHub
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos" class="projetos">
+        <div class="container">
+            <h2 class="section-title">aqui estão alguns dos meus projetos</h2>
+            
+            <div class="projetos-grid">
+                <!-- Projeto 1 - PARTE I -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <span>Imagem do Projeto</span>
+                    </div>
+                    <div class="projeto-header">
+                        <h3>PARTE I - Começando do Zero</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <div class="projeto-tags">
+                        <span class="projeto-tag">HTML</span>
+                        <span class="projeto-tag">CSS</span>
+                        <span class="projeto-tag">JavaScript</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Aqui você vai entender o básico e se preparar para a jornada de desenvolvimento.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 - PARTE II -->
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>PARTE II - IA Como Copiloto</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Aprenda a usar ferramentas de IA para programar mais rápido e eficientemente.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 - PARTE III -->
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>PARTE III - Setup e Ferramentas</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Configure tudo que você precisa no seu computador para começar a desenvolver.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <!-- Projetos 4-7 - PARTE IV -->
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>PARTE IV - Projetos 1 a 7</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Seus primeiros projetos no navegador, desenvolvendo habilidades fundamentais.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto 2</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto 3</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto 4</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto 5</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto 6</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto 7</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <!-- PARTE V - Projetos 8 a 13 -->
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>PARTE V - Projetos 8 a 13</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Projetos mais avançados com banco de dados e funcionalidades complexas.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto 9</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto 10</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto 11</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto 12</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>Projeto 13</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <!-- PARTE VI - Voz e Alexa -->
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>PARTE VI - Voz e Alexa</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Projetos com inteligência artificial e voz, explorando tecnologias avançadas.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+
+                <!-- PARTE VII - Profissão -->
+                <div class="projeto-card">
+                    <div class="projeto-header">
+                        <h3>PARTE VII - Profissão e Próximos Passos</h3>
+                        <span class="projeto-badge">Em desenvolvimento</span>
+                    </div>
+                    <p class="projeto-desc">
+                        Como transformar isso em carreira e os próximos passos no desenvolvimento profissional.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="#" class="btn-projeto" target="_blank">VER PROJETO</a>
+                        <a href="#" class="btn-projeto btn-secondary" target="_blank">VER CÓDIGO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contato -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <p class="footer-text">© <span id="current-year"></span> Alguns direitos reservados - <strong>Guilherme Maron Tavares</strong>.</p>
+            <div class="footer-socials">
+                <h4>Sociais</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:" class="social-link" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Efeitos Animados de Background - FASE 1 -->
+    <div class="animated-gradient"></div>
+    
+    <!-- Efeito de Brilho que Segue o Mouse - FASE 2 -->
+    <div class="mouse-glow"></div>
+    
+    <!-- Partículas Flutuantes -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <!-- Elementos Flutuantes (Blobs) -->
+    <div class="floating-element floating-element-1"></div>
+    <div class="floating-element floating-element-2"></div>
+    <div class="floating-element floating-element-3"></div>
+    <div class="floating-element floating-element-4"></div>
+    
+    <!-- Linhas Animadas -->
+    <div class="animated-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    
+    <!-- Scroll Progress Indicator - FASE 3 -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Botão Voltar ao Topo - FASE 3 -->
+    <button class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
