@@ -81,6 +81,15 @@ body {
     text-shadow: 0 0 8px var(--glow-purple);
 }
 
+/* Remover qualquer ponto ou indicador do menu */
+.nav-menu a::before,
+.nav-menu a::after,
+.nav-menu a.active::before,
+.nav-menu a.active::after {
+    content: none !important;
+    display: none !important;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
