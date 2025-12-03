@@ -55,24 +55,31 @@ body {
     align-items: center;
 }
 
+/* Menu de Navegação - Remoção completa de marcadores */
 .nav-menu {
     display: flex;
-    list-style: none !important;
+    list-style: none;
+    list-style-type: none;
+    list-style-image: none;
     gap: 2rem;
-    padding-left: 0;
+    padding: 0;
     margin: 0;
 }
 
 .nav-menu li {
-    list-style: none !important;
-    list-style-type: none !important;
-    padding-left: 0;
-    margin-left: 0;
+    list-style: none;
+    list-style-type: none;
+    list-style-image: none;
+    padding: 0;
+    margin: 0;
 }
 
+/* Remover todos os pseudo-elementos e marcadores */
+.nav-menu li::before,
+.nav-menu li::after,
 .nav-menu li::marker {
-    content: '' !important;
-    display: none !important;
+    content: none;
+    display: none;
 }
 
 .nav-menu a {
@@ -83,6 +90,14 @@ body {
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 1px;
+    position: relative;
+}
+
+/* Remover TODOS os pseudo-elementos dos links */
+.nav-menu a::before,
+.nav-menu a::after {
+    content: none;
+    display: none;
 }
 
 .nav-menu a:hover {
@@ -90,32 +105,23 @@ body {
     text-shadow: 0 0 8px var(--glow-purple);
 }
 
+.nav-menu a:focus,
+.nav-menu a:focus-visible,
+.nav-menu a:focus-within {
+    outline: none;
+    box-shadow: none;
+    background: none;
+}
+
 .nav-menu a.active {
     color: var(--accent-purple);
     text-shadow: 0 0 8px var(--glow-purple);
 }
 
-/* Remover qualquer ponto ou indicador do menu */
-.nav-menu a::before,
-.nav-menu a::after,
 .nav-menu a.active::before,
-.nav-menu a.active::after,
-.nav-menu li::before,
-.nav-menu li::after,
-.nav-menu li.active::before,
-.nav-menu li.active::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* Garantir que não há marcadores de lista */
-.nav-menu li {
-    list-style: none !important;
-}
-
-.nav-menu li::marker {
-    content: none !important;
-    display: none !important;
+.nav-menu a.active::after {
+    content: none;
+    display: none;
 }
 
 /* Hero Section */
@@ -1003,10 +1009,6 @@ section {
 
 /* Reduzir efeitos em mobile para performance */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-    
     .nav-menu {
         position: fixed;
         top: 0;
@@ -1022,6 +1024,22 @@ section {
         transition: right 0.3s ease;
         z-index: 1000;
         border-left: 1px solid var(--border-color);
+        list-style: none;
+        list-style-type: none;
+        list-style-image: none;
+    }
+    
+    .nav-menu li {
+        list-style: none;
+        list-style-type: none;
+        list-style-image: none;
+    }
+    
+    .nav-menu li::before,
+    .nav-menu li::after,
+    .nav-menu li::marker {
+        content: none;
+        display: none;
     }
     
     .nav-menu.active {

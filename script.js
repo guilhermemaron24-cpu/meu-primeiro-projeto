@@ -16,6 +16,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-menu a');
 
+// Limpar qualquer ponto ou caractere especial dos links ao carregar
+function cleanNavLinks() {
+    navLinks.forEach(link => {
+        let text = link.textContent.trim();
+        // Remover qualquer ponto, bullet ou caractere especial no início
+        text = text.replace(/^[•·▪▫○●■□\s]+/, '').trim();
+        if (text !== link.textContent.trim()) {
+            link.textContent = text;
+        }
+    });
+}
+
+// Limpar ao carregar
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', cleanNavLinks);
+} else {
+    cleanNavLinks();
+}
+
 window.addEventListener('scroll', () => {
     let current = '';
     
@@ -28,14 +47,21 @@ window.addEventListener('scroll', () => {
     });
 
     navLinks.forEach(link => {
+        // REMOVER completamente a classe active para não ter indicador visual
         link.classList.remove('active');
-        // Remover qualquer conteúdo antes do texto
-        if (link.textContent.trim().startsWith('•') || link.textContent.trim().startsWith('·')) {
-            link.textContent = link.textContent.replace(/^[•·]\s*/, '').trim();
+        
+        // Limpar qualquer caractere especial antes do texto
+        let text = link.textContent.trim();
+        // Remover pontos, bullets, espaços extras no início
+        text = text.replace(/^[•·▪▫○●■□\s]+/, '').trim();
+        if (text !== link.textContent.trim()) {
+            link.textContent = text;
         }
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
+        
+        // NÃO adicionar classe active - remover qualquer indicador visual
+        // if (link.getAttribute('href') === `#${current}`) {
+        //     link.classList.add('active');
+        // }
     });
 });
 
@@ -122,36 +148,9 @@ window.addEventListener('DOMContentLoaded', function() {
 // FASE 3: MELHORIAS DE UI/UX
 // ============================================
 
-// Menu Hambúrguer Mobile
-const menuToggle = document.querySelector('.menu-toggle');
+// Menu Mobile - Removido menu-toggle
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-menu a');
-
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-    });
-
-    // Fechar menu ao clicar em um link
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
-
-    // Fechar menu ao clicar fora
-    document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-}
 
 // Scroll Progress Indicator
 const scrollProgress = document.querySelector('.scroll-progress');
