@@ -51,16 +51,8 @@ body {
     margin: 0 auto;
     padding: 1rem 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--accent-purple);
-    text-decoration: none;
-    text-shadow: 0 0 10px var(--glow-purple);
 }
 
 .nav-menu {
@@ -833,19 +825,20 @@ section {
     background: radial-gradient(circle, rgba(196, 181, 253, 0.8) 0%, rgba(167, 139, 250, 0.6) 20%, rgba(139, 92, 246, 0.4) 40%, rgba(124, 58, 237, 0.2) 60%, transparent 80%);
     pointer-events: none;
     z-index: 9997 !important;
-    opacity: 0;
+    opacity: 0 !important;
     transition: opacity 0.3s ease;
     filter: blur(70px);
     transform: translate(-50%, -50%);
     will-change: left, top, opacity;
     left: 50%;
     top: 50%;
-    display: block !important;
+    display: none !important;
     box-shadow: 0 0 200px rgba(196, 181, 253, 0.5);
 }
 
 .mouse-glow.active {
-    opacity: 1 !important;
+    opacity: 0 !important;
+    display: none !important;
 }
 
 /* Cards com Efeito 3D */
