@@ -29,6 +29,10 @@ window.addEventListener('scroll', () => {
 
     navLinks.forEach(link => {
         link.classList.remove('active');
+        // Remover qualquer conteúdo antes do texto
+        if (link.textContent.trim().startsWith('•') || link.textContent.trim().startsWith('·')) {
+            link.textContent = link.textContent.replace(/^[•·]\s*/, '').trim();
+        }
         if (link.getAttribute('href') === `#${current}`) {
             link.classList.add('active');
         }

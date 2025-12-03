@@ -57,8 +57,22 @@ body {
 
 .nav-menu {
     display: flex;
-    list-style: none;
+    list-style: none !important;
     gap: 2rem;
+    padding-left: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.nav-menu li::marker {
+    content: '' !important;
+    display: none !important;
 }
 
 .nav-menu a {
@@ -85,7 +99,21 @@ body {
 .nav-menu a::before,
 .nav-menu a::after,
 .nav-menu a.active::before,
-.nav-menu a.active::after {
+.nav-menu a.active::after,
+.nav-menu li::before,
+.nav-menu li::after,
+.nav-menu li.active::before,
+.nav-menu li.active::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Garantir que não há marcadores de lista */
+.nav-menu li {
+    list-style: none !important;
+}
+
+.nav-menu li::marker {
     content: none !important;
     display: none !important;
 }
